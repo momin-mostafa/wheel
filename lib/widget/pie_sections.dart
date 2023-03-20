@@ -1,7 +1,7 @@
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
 import 'package:get/instance_manager.dart';
-import 'package:wheel/controller.dart';
+import 'package:wheel/data/controller.dart';
 import 'package:wheel/data/data.dart';
 
 List<PieChartSectionData> getSections(BuildContext context, int touchedIndex) =>
@@ -16,21 +16,18 @@ List<PieChartSectionData> getSections(BuildContext context, int touchedIndex) =>
           } else {
             data.color = data.color?.withOpacity(0.5);
           }
-          // if (index == touchedIndex) {
-          //   Get.find<WheelController>().updateIndex(index);
-          // }
-
           final value = PieChartSectionData(
             color: data.color,
-            // value: data.percent,
-            // title: data.name,
             radius: radius,
             borderSide: const BorderSide(color: Colors.white),
             badgeWidget: Image.network(
-              "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/How_to_use_icon.svg/1200px-How_to_use_icon.svg.png",
+              // for debug purpose :
+              // "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/How_to_use_icon.svg/1200px-How_to_use_icon.svg.png",
+              data.image ?? '',
               height: 40,
               width: 50,
-              color: Colors.white,
+              // color: Colors.white,
+              errorBuilder: (context, error, stackTrace) => Container(),
             ),
             badgePositionPercentageOffset: 0.7,
             titleStyle: TextStyle(

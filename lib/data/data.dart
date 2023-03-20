@@ -23,8 +23,8 @@ class PieData {
     Data(color: ColorResource.blue),
     Data(color: ColorResource.blue),
   ];
-  static setName(String name, int index) {
-    data[index].name = name;
+  static setData(Data model, int index) {
+    data[index] = model;
   }
 }
 
@@ -35,7 +35,14 @@ class Data {
 
   Color? color;
 
-  Data({name = 'Social Development', this.percent = 12.5, this.color}) {
+  String? image;
+
+  Data({
+    name = 'Social Development',
+    this.percent = 12.5,
+    this.color,
+    this.image,
+  }) {
     if (name == null) return;
     String temp = '';
     for (var i = 0; i < name!.length; i++) {

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:wheel/controller.dart';
+import 'package:wheel/data/controller.dart';
 import 'package:wheel/widget/background.dart';
 import 'package:wheel/widget/foreground.dart';
 
@@ -22,12 +22,17 @@ class Wheel extends GetView<WheelController> {
                 onSelect: onSelect,
               ),
             ),
+            Align(
+              alignment: Alignment.center,
+              child: Image.asset(
+                'assets/Vector (1).png',
+                height: 40,
+                width: 40,
+              ),
+            )
           ],
         ),
       ),
-      // floatingActionButton: FloatingActionButton(onPressed: () {
-      //   print(controller.debug);
-      // }),
     );
   }
 }

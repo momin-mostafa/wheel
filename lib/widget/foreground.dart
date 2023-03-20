@@ -1,7 +1,7 @@
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:wheel/controller.dart';
+import 'package:wheel/data/controller.dart';
 import 'package:wheel/widget/pie_sections.dart';
 
 class ForeGroundWheel extends GetView<WheelController> {

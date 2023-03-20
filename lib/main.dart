@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:wheel/controller.dart';
+import 'package:wheel/data/controller.dart';
 import 'interface.dart';
 
 void main() {
