@@ -25,9 +25,9 @@ class Wheel extends GetView<WheelController> {
             Align(
               alignment: Alignment.center,
               child: Image.asset(
-                'assets/Vector (1).png',
-                height: 40,
-                width: 40,
+                'assets/center_logo.png',
+                height: 60,
+                width: 60,
               ),
             )
           ],
